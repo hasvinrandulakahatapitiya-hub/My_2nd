@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Attendance Log | Academic Vitality</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght=400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: { extend: { colors: { "primary": "#340075", "primary-container": "#4c1d95", "surface-container-low": "#f6f2ff", "on-surface": "#181445", "on-surface-variant": "#4a4452" } } }
+        }
+    </script>
+    <style> body { font-family: 'Manrope', sans-serif; min-height: 100dvh; background-color: #fcf8ff; } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; } </style>
+</head>
+<body class="flex flex-col text-on-surface">
+    <header class="w-full sticky top-0 z-50 bg-white shadow-sm flex justify-between items-center px-6 h-20 border-b">
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">AV</div><h1 class="text-2xl font-bold text-primary">Academic Vitality</h1></div>
+    </header>
+
+    <div class="flex flex-1">
+        <aside class="w-72 bg-surface-container-low p-6 border-r flex flex-col gap-1">
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 rounded-xl transition-all"><span class="material-symbols-outlined">dashboard</span><span>Dashboard</span></a>
+            <a href="directory.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 rounded-xl transition-all"><span class="material-symbols-outlined">group</span><span>Directory</span></a>
+            <a href="attendance.html" class="flex items-center gap-3 px-4 py-3 bg-primary-container text-white rounded-xl font-bold"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fingerprint</span><span>Attendance</span></a>
+            <a href="id-cards.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 rounded-xl transition-all"><span class="material-symbols-outlined">badge</span><span>ID Design</span></a>
+            <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 rounded-xl transition-all"><span class="material-symbols-outlined">analytics</span><span>Reports</span></a>
+            <a href="settings.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 rounded-xl transition-all"><span class="material-symbols-outlined">settings</span><span>Settings</span></a>
+        </aside>
+
+        <main class="flex-grow p-8 space-y-6">
+            <div><h2 class="text-3xl font-bold text-primary">Live Attendance Log</h2><p class="text-on-surface-variant">Real-time daily monitoring and verification logs.</p></div>
+
+            <div class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-surface-container-low border-b">
+                        <tr>
+                            <th class="px-6 py-4 font-bold text-primary">Name</th>
+                            <th class="px-6 py-4 font-bold text-primary">ID Number</th>
+                            <th class="px-6 py-4 font-bold text-primary">Time</th>
+                            <th class="px-6 py-4 font-bold text-primary">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <tr>
+                            <td class="px-6 py-4 font-medium">Johnathan Doe</td>
+                            <td class="px-6 py-4 text-on-surface-variant">STU-88210</td>
+                            <td class="px-6 py-4">07:45 AM</td>
+                            <td class="px-6 py-4"><span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">On-time</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium">Marcus Thompson</td>
+                            <td class="px-6 py-4 text-on-surface-variant">STU-99214</td>
+                            <td class="px-6 py-4">08:12 AM</td>
+                            <td class="px-6 py-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Late</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
